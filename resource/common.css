@@ -10,8 +10,12 @@ body{
 .box{
     width: 750px;
     height: 750px;
-    background-color: rgb(163, 143, 25);
-    margin: calc(50vh - 375px) auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     background-image: url(./chessbox.png);
 }
 

@@ -23,7 +23,10 @@ function initChess(){
 
 // 二维转一维
 function index(x, y){
-    return y * 15 + x;
+    if((x >= 0 && x <= 14) && (x >= 0 && x <= 14)){
+        return y * 15 + x;
+    }
+    return -1;
 }
 
 // x方向偏移量
@@ -64,12 +67,12 @@ function run(num){
             state = !state;
             step.push(num);
             win = robot(num);
-            // if(win == 0){
-            //     alert("黑方获胜！");
-            // }
-            // else if(win == 1){
-            //     alert("白方获胜！");
-            // }
+            if(win == 0){
+                alert("黑方获胜！");
+            }
+            else if(win == 1){
+                alert("白方获胜！");
+            }
         }
     }
 }
